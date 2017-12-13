@@ -6,35 +6,32 @@ using System.Threading.Tasks;
 
 namespace GerenciadorAniversarios
 {
-    class Repository
+    public class Repository
     {
-        private List<Person> Persons = new List<Person>();
+        private static List<Person> Persons = new List<Person>();
 
-        private void addPerson(Person person)
+        public void AddPerson(Person person)
         {
-            Persons.Add(person);
+            Persons.Add(person);   
         }
 
-        public int consultBirthday(string name)
+        public int ConsultBirthday(string name)
         {
-            foreach(var choosePerson in Persons)
-            {
-                if(name === choosePerson)
-                {
+            //foreach(var choosePerson in Persons)
+            //{
+            //    if(name === choosePerson)
+            //    {
 
-                }
-            }
-            return 
+            //    }
+            //}
+            return 0; 
         }
 
-        public string consultName(string name)
+        public void ResultList()
         {
-            foreach (string p in Persons)
+            foreach(var list in Persons)
             {
-                if (p == name)
-                {
-                    return name;
-                }
+                Console.WriteLine(list);
             }
         }
     }
